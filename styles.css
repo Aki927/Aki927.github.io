@@ -1,0 +1,152 @@
+@charset "utf-8";
+
+/* HTML styles */
+html {
+    background-color: lightgrey; /* Progressive enhancement */
+    background-color: rgba(232,232,232,255);
+    color: black;
+    font-size: 80%;
+}
+
+/* Body styles */
+body {
+    background-color: lightgrey;
+    background-color: rgba(232,232,232,255);
+    font-family: Verdana, Geneva, Arial, sans-serif;
+    margin-right: auto;
+    margin-left: auto;
+    width: 70%;
+    min-width: 1000px;
+    max-width: 1400px;
+}
+
+body > header > img {
+    display: block;
+    width: 100%;
+}
+
+nav {
+    width: 100%;
+}
+
+nav#navLinks ul li {
+    background-color: rgb(227, 220, 220);
+    display: block;
+    float: left;
+    text-align: center;
+    width: 25%;
+}
+
+nav#navLinks ul li a {
+    color: black;
+    display: block;
+    height: 2.5em;
+    text-align: center;
+    line-height: 2.5em;
+}
+
+nav#navLinks a:link, nav#navLinks a:visited {
+    color: black;
+}
+
+nav#navLinks a:hover, nav#navLinks a:active {
+    background-color: darkgray;
+    color: white;
+}
+
+/* Article styles */
+article {
+    clear: both;
+    padding: 2% 7% 12% 7%;
+}
+
+article header {
+    margin: 60px auto;
+    width: 60%;
+}
+
+article header h1 {
+    color: black;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 3em;
+    text-align: center;
+}
+
+article::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+section {
+    float: left;
+    margin-left: 20%;
+    margin-right: 4%;
+    width: 40%;
+}
+
+section p {
+    color: black;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 250;
+    font-style: italic;
+    line-height: 1.5em;
+    margin-bottom: 1em;
+}
+
+section#secondSection {
+    float: left;
+    margin-left: 10%;
+    width: 80%;
+}
+
+section p#secondPara {
+    color: black;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 250;
+    font-style: italic;
+    line-height: 1.5em;
+}
+
+/* Aside styles */
+aside {
+    background-color: rgb(227, 220, 220);
+    border-radius: 10px;
+    float: left;
+    margin-right: 10%;
+    padding: 1% 1.5% 1.5% 1%;
+    width: 25%;
+}
+
+aside h1 {
+    color: black;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-size: 2em;
+    font-style: normal;
+    margin: 10% 20% 10% 20%;
+    text-align: center;
+}
+
+aside li {
+    color: black;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-size: 1em;
+    font-style: normal;
+    list-style-type: none;
+    margin-left: 25%;
+}
+
+nav#lifeLinks a {
+    color: black;
+    text-decoration: underline;
+    line-height: 1.5em;
+}
