@@ -1,0 +1,303 @@
+@charset "utf-8";
+
+/*
+    COMP 2681, Assignment 2
+    Style sheet for index.html and another_page.html
+    Author: Jerome Laranang, T00635622
+    Date:   July 24, 2024
+
+    Filename: styles.css
+*/
+
+/* HTML styles */
+html {
+    background-color: lightgrey; /* Progressive enhancement */
+    background-color: rgba(232,232,232,255);
+    height: 100%;
+    color: black;
+    font-size: 80%;
+}
+
+/* Body styles */
+body {
+    background-color: lightgrey; /* Progressive enhancement */
+    background-color: rgba(232,232,232,255);
+    font-family: Verdana, Geneva, Arial, sans-serif;
+    margin: 0 auto;
+    width: 100%;
+    min-width: 1000px;
+    max-width: 1400px;
+}
+
+header a img {
+    display: block;
+    width: 100%;
+}
+
+nav#lifeLinks a {
+    color: black;
+    text-decoration: underline;
+    line-height: 1.5em;
+}
+
+/* Base styles for the navicon */
+a#navicon {
+    display: block; /* Display the navicon as a block */
+    background-color: rgb(227, 220, 220); /* Match the background of your nav bar */
+    padding: 10px; /* Add some padding for spacing */
+    cursor: pointer; /* Change the cursor to pointer */
+}
+
+a#navicon img {
+    width: 30px; /* Size of the navicon image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Styles for the horizontal navigation */
+nav.horizontal {
+    background-color: rgb(227, 220, 220); /* Match the existing nav bar color */
+    clear: both;
+    width: 100%;
+}
+
+nav.horizontal ul {
+    display: flex; /* Flexbox to lay out items horizontally */
+    flex-flow: row nowrap;
+}
+
+
+nav.horizontal ul li {
+    background-color: rgb(227, 220, 220);
+    color: black;
+    font-size: 1.5em;
+    line-height: 2em;
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+nav.horizontal ul li a {
+    height: 2.5em;
+    line-height: 2.5em;
+    display: block;
+    text-align: center;
+    color: black;
+    padding: 10px;
+}
+
+nav.horizontal a:link, nav.horizontal a:visited {
+    color: black;
+}
+
+nav.horizontal a:hover, nav.horizontal a:active {
+    background-color: darkgray;
+    color: white;
+}
+
+/* Article styles */
+article {
+    clear: both;
+    padding: 2% 7% 12% 7%;
+}
+
+article header {
+    margin: 60px auto;
+    width: 60%;
+}
+
+article header h1 {
+    color: black;
+    font-family: Roboto, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 3em;
+    text-align: center;
+}
+
+article::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+section#firstSection {
+    float: left;
+    margin-left: 20%;
+    margin-right: 4%;
+    width: 40%;
+}
+
+section#firstSection p {
+    color: black;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 250;
+    font-style: italic;
+    line-height: 1.5em;
+    margin-bottom: 1em;
+}
+
+section#secondSection {
+    float: left;
+    margin: 5% auto;
+    width: 80%;
+}
+
+section#secondSection p {
+    color: black;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 250;
+    font-style: italic;
+    line-height: 1.5em;
+}
+
+/* Aside styles */
+aside {
+    background-color: rgb(227, 220, 220);
+    border-radius: 10px;
+    float: left;
+    margin-right: 5%;
+    padding: 1% 1.5% 1.5% 1%;
+    width: 25%;
+}
+
+aside h1 {
+    color: black;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-size: 2em;
+    font-style: normal;
+    margin: 10% 20% 10% 20%;
+    text-align: center;
+}
+
+aside li {
+    color: black;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-size: 1em;
+    font-style: normal;
+    list-style-type: none;
+    margin-left: 25%;
+}
+
+/* Footer Styles */
+footer {
+    background: linear-gradient(to left, rgb(206, 193, 193),
+        rgb(227, 220, 220) 100%);
+    color: rgb(92, 64, 51);
+    text-align: center;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-size: 1.4em;
+    padding: 2% 0 2%;
+}
+
+
+
+/* New styles for Assignment 3 added below */
+/* ===============================
+   Mobile Devices: 0px to 480px
+   ===============================
+*/
+@media only screen and (max-width: 480px) {
+
+    section#firstSection, aside {
+        float: none;
+        width: 70%;
+        margin: 0 auto;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    nav#lifeLinks h1 {
+        margin: 1% auto 0;
+    }
+
+    article {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    a#navicon {
+        display: block;
+    }
+
+    nav.horizontal ul {
+        display: none;
+    }
+
+    a#navicon:hover+ul, nav.horizontal ul:hover {
+        background-color: rgb(227, 220, 220);
+        display: block;
+    }
+
+}
+/* ===============================
+   Tablet Devices: greater than 480px
+   ===============================
+*/
+@media only screen and (min-width: 481px) {
+
+    a#navicon {
+        display: none;
+    }
+
+    section#secondSection {
+        float: none;
+        width: 80%;
+        margin: 0 auto;
+        padding: 3%;
+        box-sizing: border-box;
+    }
+}
+/* ===============================
+   Desktop Devices: greater than 480px
+   ===============================
+*/
+@media only screen and (min-width: 769px) {
+
+    article {
+        order: 1;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    article aside {
+        width: 25%;
+        margin: 5% 5% 0 0;
+    }
+
+    div.right-div {
+        order: 2;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        flex: 1;
+        margin: 5% 0 0 0;
+    }
+
+    article header {
+        order: 1;
+        width: 100%;
+        margin: 0;
+    }
+
+    article section#firstSection {
+        order: 2;
+        width: 100%;
+        margin: 5% 0 0 0;
+    }
+
+}
