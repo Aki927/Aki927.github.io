@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+/* Hidden Objects */
+nav.horizontal, nav#lifeLinks, a#navicon {
+    display: none;
+}
+
+/* Page Box Styles */
+@page {
+    size: 8.5in 11in;
+    margin: 0.5in;
+}
+
+/* Header Styles */
+body > header > a > img {
+    display: block;
+    width: 100%;
+}
+
+header img {
+    border: 2px solid rgb(191, 191, 191);
+    display: block;
+    margin: 0.25in auto;
+    width: 50%;
+}
+
+
+/* Typography Styles */
+h1 {
+    font-size: 28pt;
+    line-height: 30pt;
+    margin: 0.3in 2in 0.2in;
+}
+
+p {
+    font-size: 12pt;
+    margin: 0.1in 0.3in;
+    orphans: 3;
+    widows: 3;
+    page-break-inside: avoid;
+}
+
+/* Page Break Styles */
+article:nth-of-type(n+2) {
+    page-break-before: always;
+}

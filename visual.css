@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+/*
+    COMP 2681, Assignment 2
+    Visual style sheet for index.html and another_page.html
+    Author: Jerome Laranang, T00635622
+    Date:   July 24, 2024
+
+    Filename: visual.css
+*/
+
+/* HTML styles */
+html {
+    background-image: url("images/marble_back.png");
+}
+
+/* body styles*/
+body {
+    border-left: 1px solid rgb(51, 51, 51);
+    border-right: 1px solid rgb(51, 51, 51);
+    box-shadow: rgb(51, 51, 51) 15px 0 25px,
+    rgb(51, 51, 51) -15px 0 25px;
+}
+
+/* Figure box styles */
+figure {
+    border-style: solid;
+    border-width: 25px;
+    border-image: url("images/frame.png") 50 repeat;
+    margin: 20px auto 0;
+    width: 80%;
+}
+
+figure img {
+    display: block;
+    width: 100%;
+}
+
+figure figcaption {
+    background-color: lightgray;
+    color: black;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 250;
+    font-style: italic;
+    padding: 3px 0;
+    text-align: center;
+}

@@ -1,0 +1,167 @@
+@charset "UTF-8";
+
+/*
+    COMP 2681, Assignment 3
+    Style sheet for form.html
+    Author: Jerome Laranang, T00635622
+    Date:   August 16, 2024
+
+    Filename: oform.css
+*/
+
+section.form-banner {
+    background: linear-gradient(to bottom, rgb(206, 193, 193),
+        rgb(227, 220, 220) 100%);
+    text-align: center;
+    padding: 8%;
+    border-radius: 5px;
+    margin: 0 auto 20px auto;
+    color: rgb(92, 64, 51);
+}
+
+section.form-banner div h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 4em;
+    padding: 1%;
+}
+
+section.form-banner div h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 350;
+    font-size: 3em;
+}
+
+form#contactForm {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    width: 60%;
+    margin: auto;
+    font-family: 'Inter', sans-serif;
+}
+
+form#contactForm header div {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    line-height: 1.3em;
+    font-size: 1.3em;
+}
+
+fieldset#personalInfo {
+    background-color: white;
+    -webkit-flex: 1 1 300px;
+    flex: 1 1 300px;
+    margin: 2% auto 1%;
+    align-items: center;
+}
+
+div {
+    margin: 4%;
+    width: 100%;
+}
+
+div.formRow {
+    display: flex;
+    justify-content: center; /* Centers the label and input within the row */
+    width: 100%;
+    margin-bottom: 2%; /* Adds space between rows */
+}
+
+legend {
+    color: white;
+    background-color: rgb(92, 64, 51);
+    font-size: 1.5em;
+}
+
+div.formRow label {
+    display: inline-block;
+    text-align: right;
+    width: 20%;
+    margin-right: 3%;
+    font-size: 1.4em;
+}
+
+input[type=text], select {
+    width: 40%;
+    padding: 1% 2%;
+}
+
+input[type=checkbox]  {
+    margin-right: 3%;
+}
+
+div.text-box {
+    display: flex;
+    flex-direction: column;
+    margin: 3% 0 5%;
+}
+
+div.text-box label {
+    margin: 0 0 1% 10%;
+    font-size: 1.4em;
+}
+
+div.text-box textarea {
+    width: 80%;
+    box-sizing: border-box;
+    font-size: 1.2em;
+    margin: 0 auto;
+    height: 10em;
+}
+
+/* Textarea Styles */
+div.check-box {
+    align-items: flex-start;
+    padding-left: 8%;
+}
+
+div.check-box label {
+    font-size: 1.4em;
+}
+
+/* Form Button Styles */
+div#buttons {
+    width: 100%;
+}
+
+input[type='submit'], input[type='reset'] {
+    font-size: 1.4em;
+    padding: 2%;
+    margin: 0 1% 5% 0;
+}
+
+/* Validation Styles */
+input:focus, select:focus, textarea:focus {
+    background-color: lightyellow;
+}
+
+input#first-name:focus:valid, input#postal-code:focus:valid,
+input#ph-num:focus:valid {
+    background: lightgreen url(images/check_14025690.png) right /
+        contain no-repeat;
+}
+
+input#first-name:focus:invalid, input#postal-code:focus:invalid,
+input#ph-num:focus:invalid {
+    background: lightpink url(images/warning_8280473.png) right /
+        contain no-repeat;
+}
+
+@media only screen and (max-width: 480px) {
+
+    div.formRow {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    div.formRow label, input[type=text], select, div.text-box {
+        box-sizing: border-box;
+        width: 80%;
+        margin-right: 0;
+        margin-bottom: 2%;
+        text-align: left;
+    }
+}

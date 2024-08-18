@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+  COMP 2681, Assignment 2
+  HTML page for a personal website
+  Author: Jerome Laranang
+  Date:   August 17, 2024
+
+  Filename: another_page.html
+  Link: https://aki927.github.io/
+ -->
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jerome Laranang | Budding Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+  <link href="reset.css" rel="stylesheet" media="all"/>
+  <link href="styles.css" rel="stylesheet" media="screen"/>
+  <link href="visual.css" rel="stylesheet" media="screen"/>
+  <link href="oform.css" rel="stylesheet" media="screen"/>
+  <link href="print.css" rel="stylesheet" media="print"/>
+
+</head>
+<body>
+<header>
+  <a href="index.html">
+    <img src="images/heading_logo2.png" alt="Heading with logo"/>
+  </a>
+  <nav id="navLinks" class="horizontal">
+    <a id="navicon" href="#"><img src="images/navicon.png" alt="navicon" width="512"/></a>
+    <ul>
+      <li><a href="#">about</a></li>
+      <li><a href="#">portfolio</a></li>
+      <li><a href="https://www.linkedin.com/in/jerome-laranang/" target="_self">social</a></li>
+      <li><a href="form.html" target="_self">contact me</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<section class="form-banner">
+  <div>
+    <h1>Contact Me</h1>
+    <h2>Let's Collaborate!</h2>
+  </div>
+</section>
+<section>
+  <form id="contactForm">
+    <header>
+      <div>I'm creating my portfolio in preparation for an internships. This includes
+        building projects, Leetcode, Data Structures & Algorithms practice, and web development.
+        I've excelled in the following courses: linear algebra, statistics, discrete math, computer systems,
+        Java 1 & 2, Python, C, C#, SQL and Assembly. <strong>Ask me for help!</strong>
+      </div>
+    </header>
+    <fieldset id="personalInfo">
+      <legend>Personal Information</legend>
+
+      <div class="formRow">
+        <label for="first-name">First Name*</label>
+        <input name="fName" id="first-name" type="text" placeholder="First name" required/>
+      </div>
+
+      <div class="formRow">
+        <label for="last-name">Last Name</label>
+        <input name="lName" id="last-name" type="text" placeholder="Last name"/>
+      </div>
+
+      <div class="formRow">
+        <label for="street-name">Street</label>
+        <input name="street" id="street-name" type="text" placeholder="Street"/>
+      </div>
+
+      <div class="formRow">
+        <label for="city-name">City</label>
+        <input name="city" id="city-name" type="text" placeholder="Toronto"/>
+      </div>
+
+      <div class="formRow">
+        <label for="province-name">Province</label>
+        <input name="province" id="province-name" type="text" placeholder="ON"/>
+      </div>
+
+      <div class="formRow">
+        <label for="postal-code">Postal Code*</label>
+        <input name="poscode" id="postal-code" type="text" placeholder="A1A 1A1"
+               pattern="[A-Za-z][0-9][A-Za-z][0-9][A-Za-z][0-9]|[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" required/>
+      </div>
+
+      <div class="formRow">
+        <label for="ph-num">Phone Number*</label>
+        <input name="phone" id="ph-num" type="text" placeholder="###-###-####"
+               pattern="\d{3}[\-]\d{3}[\-]\d{4}|\d{10}" inputmode="numeric" maxlength="12" required/>
+      </div>
+
+      <div class="formRow">
+        <label for="occ">Occupation</label>
+        <select name="occupation" id="occ" multiple size="12">
+          <optgroup label="(Select one or more)"></optgroup>
+          <optgroup label="Student">
+            <option value="business>">Business</option>
+            <option value="compsci" selected>Computer Science</option>
+            <option value="engineering">Engineering</option>
+            <option value="other1">Other</option>
+          </optgroup>
+          <optgroup label="Employed">
+            <option value="dsc">Data Scientist</option>
+            <option value="swe">Software Engineer</option>
+            <option value="pmp">Project Manager</option>
+            <option value="other2">Other</option>
+          </optgroup>
+          <optgroup label="Job Hunting">
+            <option value="intern">Internships</option>
+            <option value="interview">Interview Prep</option>
+            <option value="dsa">Leetcode Practice</option>
+            <option value="other3">Other</option>
+          </optgroup>
+        </select>
+      </div>
+      <div class="text-box">
+        <label for="commentBox">Write me a message. I would like to learn more about you.</label>
+        <textarea name="message" id="commentBox"></textarea>
+      </div>
+
+      <div class="check-box">
+        <input name="contactMe" id="contactCB" value="yes" type="checkbox"/>
+        <label for="contactCB">I give my permission to be contacted.</label>
+      </div>
+    </fieldset>
+
+    <div id="buttons">
+      <input type="submit" value="Submit Details"/>
+      <input type="reset" value="Cancel Details"/>
+    </div>
+  </form>
+</section>
+<footer>
+  Living & Learning through Life-Long Learning, One Day at a Time &#183; (701) 555 - 5611
+</footer>
+</body>
+</html>
