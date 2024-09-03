@@ -1,5 +1,19 @@
 @charset "UTF-8";
 
+/*
+    COMP 2681, Assignment 4
+    Print sheet for index.html, another_page.html, form.html, birthday.html
+    Author: Jerome Laranang, T00635622
+    Date:   September 2, 2024
+
+    Filename: print.css
+*/
+
+/* ===============================
+   Assignment 2 and 3 Print Styles
+   ===============================
+*/
+
 /* Hidden Objects */
 nav.horizontal, nav#lifeLinks, a#navicon {
     display: none;
@@ -40,7 +54,39 @@ p {
     page-break-inside: avoid;
 }
 
+/* Footer Styles */
+footer {
+    display: none;
+}
+
 /* Page Break Styles */
 article:nth-of-type(n+2) {
     page-break-before: always;
 }
+
+/* ===============================
+   Assignment 4 Print Styles
+   ===============================
+*/
+div.birthday_banner h2, div#dateToday,
+div#bdayCountdown, div.text_container,
+div.video_container, figure.birthday_photo-figure img,
+div.venue_container, div.formRow > input,
+div.text-box > textarea, div#buttons,
+article.rsvp_article > h3 {
+    display: none;
+}
+
+figure.birthday_photo-figure {
+    width: 300px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+div.formRow {margin-bottom: 4%;}
+
+div.check-box {margin-top: 10%;}
+
+div#schedule_container {margin: 5% auto;}
+

@@ -1,16 +1,24 @@
 @charset "UTF-8";
 
 /*
-    COMP 2681, Assignment 3
-    Style sheet for form.html
+    COMP 2681, Assignment 4
+    Style sheet for form.html, birthday.html
     Author: Jerome Laranang, T00635622
-    Date:   August 16, 2024
+    Date:   September 2, 2024
 
     Filename: oform.css
 */
 
+/* ===============================
+   Assignment 3 Web Form Styles
+   August 18, 2024
+   ===============================
+*/
+
+/* Form Banner Styles */
 section.form-banner {
-    background: linear-gradient(to bottom, rgb(206, 193, 193),
+    background: linear-gradient(to bottom,
+        rgb(206, 193, 193),
         rgb(227, 220, 220) 100%);
     text-align: center;
     padding: 8%;
@@ -32,7 +40,8 @@ section.form-banner div h2 {
     font-size: 3em;
 }
 
-form#contactForm {
+/* Form Styles */
+form#cForm {
     display: -webkit-flex;
     display: flex;
     -webkit-flex-flow: row wrap;
@@ -42,7 +51,7 @@ form#contactForm {
     font-family: 'Inter', sans-serif;
 }
 
-form#contactForm header div {
+form#cForm header div {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
@@ -58,16 +67,16 @@ fieldset#personalInfo {
     align-items: center;
 }
 
-div {
-    margin: 4%;
-    width: 100%;
-}
+div {margin: 4%; width: 100%;}
+
+/* Fieldset Styles */
 
 div.formRow {
+    display: -webkit-flex;
     display: flex;
-    justify-content: center; /* Centers the label and input within the row */
+    justify-content: center;
     width: 100%;
-    margin-bottom: 2%; /* Adds space between rows */
+    margin-bottom: 2%;
 }
 
 legend {
@@ -84,17 +93,19 @@ div.formRow label {
     font-size: 1.4em;
 }
 
+/* Input Styles */
 input[type=text], select {
     width: 40%;
     padding: 1% 2%;
+    border: 2px solid black;
 }
 
-input[type=checkbox]  {
-    margin-right: 3%;
-}
+input[type=checkbox]  {margin-right: 3%;}
 
 div.text-box {
+    display: -webkit-flex;
     display: flex;
+    -webkit-flex-direction: column;
     flex-direction: column;
     margin: 3% 0 5%;
 }
@@ -110,22 +121,19 @@ div.text-box textarea {
     font-size: 1.2em;
     margin: 0 auto;
     height: 10em;
+    border: 2px solid black;
 }
 
-/* Textarea Styles */
+/* CheckBox Styles */
 div.check-box {
     align-items: flex-start;
     padding-left: 8%;
 }
 
-div.check-box label {
-    font-size: 1.4em;
-}
+div.check-box label {font-size: 1.4em;}
 
 /* Form Button Styles */
-div#buttons {
-    width: 100%;
-}
+div#buttons {width: 100%;}
 
 input[type='submit'], input[type='reset'] {
     font-size: 1.4em;
@@ -139,29 +147,189 @@ input:focus, select:focus, textarea:focus {
 }
 
 input#first-name:focus:valid, input#postal-code:focus:valid,
-input#ph-num:focus:valid {
+input#ph-num:focus:valid, input#email:focus:valid {
     background: lightgreen url(images/check_14025690.png) right /
         contain no-repeat;
 }
 
 input#first-name:focus:invalid, input#postal-code:focus:invalid,
-input#ph-num:focus:invalid {
+input#ph-num:focus:invalid, input#email:focus:invalid {
     background: lightpink url(images/warning_8280473.png) right /
         contain no-repeat;
 }
 
+
+/* ===============================
+   Assignment 4 Birthday Styles
+   September 1, 2024
+   ===============================
+*/
+
+/* RSVP Form Styles */
+div.rsvp_div {
+    font-family: 'Inter', sans-serif;
+    margin: 0 auto;
+    background-color: white;
+}
+
+article.rsvp_article {
+    display: block;
+    color: rgb(37, 150, 190);
+}
+
+article.rsvp_article > h2 {
+    font-size: 3.5em;
+    margin: 5% auto;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+article.rsvp_article > h3 {
+    font-size: 2.5em;
+    margin: 5% auto;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+article.rsvp_article > ul > li {
+    list-style-type: none;
+    font-size: 2.5em;
+    line-height: 1.5em;
+    text-align: center;
+    margin: 0 5%;
+}
+
+article.rsvp_article ul li:first-of-type {
+    list-style-image: url(images/maps_17253072.png);
+}
+article.rsvp_article ul li:nth-of-type(2) {
+    list-style-image: url(images/time_16633129.png);
+}
+article.rsvp_article ul li:last-of-type {
+    list-style-image: url(images/phone-call_455705.png);
+}
+
+section.rsvp_section {
+    background-color: white;
+    position: relative;
+    display: flex;
+}
+
+form#rsvpForm {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+fieldset#rsvp_fieldset {
+    background-color: rgb(37, 150, 190);
+    color: white;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    justify-content: center;
+    font-size: 1.2em;
+}
+
+div.rsvp_fieldset div.formRow {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 5% auto;
+}
+
+h2#rsvp_h2 {
+    font-size: 3.5em;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+    color: rgb(37, 150, 190);
+    display: block;
+}
+
+legend#rsvp_legend {display: none;}
+
+
+/* ===============================
+   Mobile Devices: 0px to 480px
+   ===============================
+*/
 @media only screen and (max-width: 480px) {
 
     div.formRow {
+        -webkit-flex-direction: column;
         flex-direction: column;
         align-items: flex-start;
     }
 
-    div.formRow label, input[type=text], select, div.text-box {
+    div.formRow label, input[type="text"], select, div.text-box {
         box-sizing: border-box;
-        width: 80%;
+        width: 100%;
         margin-right: 0;
         margin-bottom: 2%;
         text-align: left;
+    }
+
+    div.columns-1-2 {flex: 1 1 100%;}
+
+    section.rsvp_section {width: 100%;}
+
+    fieldset#rsvp_fieldset {
+        justify-content: center;
+        align-items: center;
+        padding: 5% 20%;
+        margin-bottom: 5%;
+    }
+
+    input[type="text"] {
+        width: 80%;
+        padding: 2% 2%;
+    }
+
+    div.text-box > label, div.text-box > textarea {
+        margin: 1% 4%;
+    }
+
+    legend#rsvp_legend {
+        display: block;
+        color: white;
+        background-color: rgb(37, 150, 190);
+        font-size: 1.5em;
+    }
+
+}
+
+/* ===============================
+   Tablet Devices: 480px to 769px
+   ===============================
+*/
+@media only screen and (min-width: 480px) and (max-width: 769px) {
+
+    .rsvp_section .formRow {
+        display: flex;
+        display: -webkit-flex;
+        flex-direction: column;
+        -webkit-flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .rsvp_section .formRow label,
+    .rsvp_section .formRow input[type=text],
+    .rsvp_section .formRow select {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .rsvp_section .formRow label {
+        margin-bottom: 5px;
+        text-align: left;
+    }
+
+    .rsvp_section .formRow input[type=text] {
+        width: 70%;
+        box-sizing: border-box;
     }
 }

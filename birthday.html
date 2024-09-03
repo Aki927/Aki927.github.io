@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+  COMP 2681, Assignment 4
+  HTML page for my birthday countdown invitation.
+  Includes audio, video, forms, and countdown
+
+  Author: Jerome Laranang
+  Date:   September 2, 2024
+
+  Filename: birthday.html
+  Link: https://aki927.github.io/
+ -->
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jerome Laranang | Budding Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+  <link href="reset.css" rel="stylesheet" media="all"/>
+  <link href="styles.css" rel="stylesheet" media="screen"/>
+  <link href="visual.css" rel="stylesheet" media="screen"/>
+  <link href="oform.css" rel="stylesheet" media="screen"/>
+  <link href="animate.css" rel="stylesheet" media="screen" />
+  <link href="print.css" rel="stylesheet" media="print"/>
+  <script src="formSubmit.js"></script>
+  <script src="birthdayCountdown.js" defer></script>
+
+</head>
+<body>
+<header>
+  <a href="index.html">
+    <img src="images/heading_logo2.png" alt="Heading with logo"/>
+  </a>
+  <nav id="navLinks" class="horizontal">
+    <a id="navicon" href="#"><img src="images/navicon.png" alt="navicon" width="512"/></a>
+    <ul>
+      <li><a href="#">about</a></li>
+      <li><a href="birthday.html" target="_self">birthday</a></li>
+      <li><a href="https://www.linkedin.com/in/jerome-laranang/" target="_self">social</a></li>
+      <li><a href="form.html" target="_self">contact me</a></li>
+    </ul>
+  </nav>
+
+  <!-- Image used as background cover and uses relative positioning.
+  Countdown, Current Time, and text are added on top -->
+  <div class="birthday_banner">
+    <img src="images/pool.png" alt="Cabana pool venue"/>
+    <h1>You're Invited To<br/>Jerome's Birthday Celebration</h1>
+    <h2 id="timeHeading">Current Time</h2>
+    <!-- These values are overridden in birthdayCountdown.js -->
+    <div id="dateToday">8/28/2024<br/>7:06:12 p.m.</div>
+
+    <div id="bdayCountdown">
+      <div><span id="rDays">58</span><br/>Days</div>
+      <div><span id="rHrs">10</span><br/>Hours</div>
+      <div><span id="rMin">14</span><br/>Minutes</div>
+      <div><span id="rSec">48</span><br/>Seconds</div>
+    </div>
+  </div>
+</header>
+
+<!-- Navigation bar added to link to Cabana Pool bar's website, food/drinks menu, and directions -->
+<nav id="event_nav" class="horizontal">
+  <ul>
+    <li><a href="https://cabanapoolbar.com/" target="_self">Venue Info</a></li>
+    <li>
+      <a href="https://www.sirved.com/restaurant/toronto-ontario-canada/cabana-poolbar/646392/menu/3613209"
+         target="_self">Food/Beverage</a></li>
+    <li><a href="https://cabanapoolbar.com/info/" target="_self">Directions</a></li>
+  </ul>
+</nav>
+
+<!-- Audio Row-->
+<div class="media_row">
+  <div class="columns-1-2">
+    <div class="text_container">
+      <h2>A Greeting from Me to You</h2>
+      <p>Click the play button to listen to an audio recording</p>
+      <audio controls>
+        <source src="audio_invite.mp3" type="audio/mp3"/>
+        <source src="audio_invite.ogg" type="audio/ogg"/>
+      </audio>
+    </div>
+  </div>
+  <div class="columns-1-2">
+    <figure class="birthday_photo-figure">
+      <img src="images/IMG_1094.JPG" alt="Sailing on a boat"/>
+    </figure>
+  </div>
+</div>
+
+<!-- Video Row-->
+<div class="media_row">
+  <div class="columns-1-2">
+    <div class="video_container">
+      <video controls poster="images/IMG_73529764ABE1-1.jpeg">
+        <source src="video_invite.mp4" type="video/mp4"/>
+        <source src="video_invite.webm" type="video/webm"/>
+        <track kind="captions" label="Bday_Captions" src="video_captions.vtt" default/>
+      </video>
+    </div>
+  </div>
+  <div class="columns-1-2">
+    <div class="venue_container">
+      <h2>I Hope You Enjoy This Video</h2>
+      <p>Click the play button to watch the video.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Party Details and Party Itinerary/Schedule -->
+<div class="rsvp_div">
+  <article class="rsvp_article">
+    <h2>Party Details</h2>
+    <ul>
+      <li><strong>Where: </strong>Cabana Pool Bar, 11 Polson St, Toronto, ON M5A 1A4</li>
+      <li><strong>When: </strong>July 27, 2025 3 p.m. to  12 a.m.</li>
+      <li><strong>Contact: </strong>Jerome's cell: 236-111-1111, Venue contact: 416-469-5655</li>
+    </ul>
+    <h3>Hover over the Schedule to Pause</h3>
+    <div id="schedule_container">
+      <table id="schedule_table">
+        <tbody>
+        <tr><td>3:00 PM</td><td>Welcome Drinks & Poolside Mingling</td></tr>
+        <tr><td>4:00 PM</td><td>Pool Games & Water Volleyball</td></tr>
+        <tr><td>5:00 PM</td><td>BBQ & Refreshments</td></tr>
+        <tr><td>6:00 PM</td><td>Live DJ & Dancing</td></tr>
+        <tr><td>7:00 PM</td><td>Birthday Cake Cutting</td></tr>
+        <tr><td>8:00 PM</td><td>Poolside Karaoke</td></tr>
+        <tr><td>9:00 PM</td><td>Sunset Cocktails</td></tr>
+        <tr><td>10:00 PM</td><td>Movie Screening by the Pool</td></tr>
+        <tr><td>11:00 PM</td><td>Fireworks</td></tr>
+        <tr><td>12:00 AM</td><td>Stay Tuned for After-Party Details</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </article>
+</div>
+
+<!-- RSVP Form -->
+<div class="media_row">
+  <div class="columns-1-2">
+    <div class="text_container">
+      <h2>I'd Love To See You There</h2>
+      <p>Please fill in the RSVP form, so I can keep track of attendance</p>
+    </div>
+  </div>
+  <div class="columns-1-2">
+    <form id="rsvpForm" action="https://aki927.github.io/" method="post">
+      <section class="rsvp_section">
+        <fieldset id="rsvp_fieldset">
+          <legend id="rsvp_legend">R.S.V.P.</legend>
+          <div class="formRow">
+            <label for="first-name">First Name*</label>
+            <input name="fName" id="first-name" type="text" placeholder="First name" required/>
+          </div>
+
+          <div class="formRow">
+            <label for="last-name">Last Name</label>
+            <input name="lName" id="last-name" type="text" placeholder="Last name"/>
+          </div>
+
+          <div class="formRow">
+            <label for="ph-num">Phone Number*</label>
+            <input name="phone" id="ph-num" type="text" placeholder="###-###-####"
+                   pattern="\d{3}[\-]\d{3}[\-]\d{4}|\d{10}" inputmode="numeric" maxlength="12" required/>
+          </div>
+
+          <div class="formRow">
+            <label for="email">E-mail*</label>
+            <input name="eMail" id="email" type="text" placeholder="JohnDoe@gmail.com"
+                   pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" required />
+          </div>
+
+          <div class="text-box">
+            <label for="commentBox">Enter any special requests such as dietary restrictions or accommodations</label>
+            <textarea name="message" id="commentBox"></textarea>
+          </div>
+
+          <div class="check-box">
+            <input name="contactMe" id="contactCB" value="yes" type="checkbox" required />
+            <label for="contactCB">I give my permission to be contacted.</label>
+          </div>
+
+          <div id="buttons">
+            <input type="submit" value="Submit Details"/>
+            <input type="reset" value="Cancel Details"/>
+          </div>
+        </fieldset>
+      </section>
+    </form>
+  </div>
+  <footer class="birthday_footer">
+    Jerome's Birthday &#183; July 27, 2025 &#183; Cabana Pool Bar, 11 Polson St, Toronto, ON M5A 1A4
+    &#183; (236) 111-1111.
+  </footer>
+</div>
+</body>
+</html>

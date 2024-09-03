@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <!--
-  COMP 2681, Assignment 2
-  HTML page for a personal website
+  COMP 2681, Assignment 3
+  Form page for a personal website
   Author: Jerome Laranang
   Date:   August 17, 2024
 
-  Filename: another_page.html
+  Filename: form.html
   Link: https://aki927.github.io/
  -->
   <meta charset="utf-8"/>
@@ -23,7 +23,7 @@
   <link href="visual.css" rel="stylesheet" media="screen"/>
   <link href="oform.css" rel="stylesheet" media="screen"/>
   <link href="print.css" rel="stylesheet" media="print"/>
-  <script src="cOrder.js"></script>
+  <script src="formSubmit.js"></script>
 
 </head>
 <body>
@@ -35,13 +35,12 @@
     <a id="navicon" href="#"><img src="images/navicon.png" alt="navicon" width="512"/></a>
     <ul>
       <li><a href="#">about</a></li>
-      <li><a href="#">portfolio</a></li>
+      <li><a href="birthday.html" target="_self">birthday</a></li>
       <li><a href="https://www.linkedin.com/in/jerome-laranang/" target="_self">social</a></li>
       <li><a href="form.html" target="_self">contact me</a></li>
     </ul>
   </nav>
 </header>
-
 
 <section class="form-banner">
   <div>
@@ -50,9 +49,9 @@
   </div>
 </section>
 <section>
-  <form id="contactForm" action="https://aki927.github.io/" method="post">
+  <form id="cForm" action="https://aki927.github.io/" method="post">
     <header>
-      <div>I'm creating my portfolio in preparation for an internships. This includes
+      <div>I'm creating my portfolio in preparation for internships. This includes
         building projects, Leetcode, Data Structures & Algorithms practice, and web development.
         I've excelled in the following courses: linear algebra, statistics, discrete math, computer systems,
         Java 1 & 2, Python, C, C#, SQL and Assembly. <strong>Ask me for help!</strong>

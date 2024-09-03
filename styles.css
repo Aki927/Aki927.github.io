@@ -1,12 +1,19 @@
 @charset "utf-8";
 
 /*
-    COMP 2681, Assignment 2
-    Style sheet for index.html and another_page.html
+    COMP 2681, Assignment 4
+    Style sheet for index.html, another_page.html, form.html, birthday.html
+
     Author: Jerome Laranang, T00635622
-    Date:   July 24, 2024
+    Date:   September 2, 2024
 
     Filename: styles.css
+*/
+
+/* ===============================
+   Assignment 2 Styles
+   July 27, 2024
+   ===============================
 */
 
 /* HTML styles */
@@ -27,6 +34,7 @@ body {
     width: 100%;
     min-width: 1000px;
     max-width: 1400px;
+    justify-content: center;
 }
 
 header a img {
@@ -42,26 +50,28 @@ nav#lifeLinks a {
 
 /* Base styles for the navicon */
 a#navicon {
-    display: block; /* Display the navicon as a block */
-    background-color: rgb(227, 220, 220); /* Match the background of your nav bar */
-    padding: 10px; /* Add some padding for spacing */
-    cursor: pointer; /* Change the cursor to pointer */
+    display: block;
+    background-color: rgb(227, 220, 220);
+    padding: 10px;
+    cursor: pointer;
 }
 
 a#navicon img {
-    width: 30px; /* Size of the navicon image */
-    height: auto; /* Maintain aspect ratio */
+    width: 30px;
+    height: auto;
 }
 
 /* Styles for the horizontal navigation */
 nav.horizontal {
-    background-color: rgb(227, 220, 220); /* Match the existing nav bar color */
+    background-color: rgb(227, 220, 220);
     clear: both;
     width: 100%;
 }
 
 nav.horizontal ul {
-    display: flex; /* Flexbox to lay out items horizontally */
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
     flex-flow: row nowrap;
 }
 
@@ -71,6 +81,7 @@ nav.horizontal ul li {
     color: black;
     font-size: 1.5em;
     line-height: 2em;
+    -webkit-flex: 1 1 auto;
     flex: 1 1 auto;
     text-align: center;
 }
@@ -186,8 +197,9 @@ aside li {
 
 /* Footer Styles */
 footer {
-    background: linear-gradient(to left, rgb(206, 193, 193),
-        rgb(227, 220, 220) 100%);
+    background: linear-gradient(to left,
+    rgb(206, 193, 193),
+    rgb(227, 220, 220) 100%);
     color: rgb(92, 64, 51);
     text-align: center;
     font-optical-sizing: auto;
@@ -196,9 +208,232 @@ footer {
     padding: 2% 0 2%;
 }
 
+/*migrate*/
+/* Banner Styles */
+.birthday_banner {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    background: url('images/pool.png') no-repeat center center;
+    background-size: cover;
+    font-family: 'Inter', sans-serif;
+}
+
+.birthday_banner img {
+    width: 100%;
+    height: 800px;
+    display: block;
+}
+
+.birthday_banner > h1 {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-align: right;
+    margin: 0;
+    font-size: 4em;
+    line-height: 1em;
+    font-style: italic;
+    color: white;
+    text-shadow: -3px -3px 10px black, 3px -3px 10px black,
+    -3px 3px 10px black, 3px 3px 10px black;
+}
+
+div.birthday_banner > h1:hover { /* Animation Styles */
+    color: black;
+    font-size: 5em;
+    letter-spacing: 0.1em;
+    text-shadow: -6px -6px 15px white, 6px -6px 15px white,
+    -6px 6px 15px white, 6px 6px 15px white;
+    transition: color 1.5s ease-in 0.5s,
+    font-size 2s ease,
+    letter-spacing 2s ease-out,
+    text-shadow 2s cubic-bezier(0.6, 0, 0.8, 0.5);
+}
+
+.birthday_banner > h2 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    margin: 0 0 10px 0;
+    font-size: 3em;
+    font-weight: normal;
+    color: white;
+    text-shadow: -3px -3px 5px black, 3px -3px 5px black,
+    -3px 3px 5px black, 3px 3px 5px black;
+}
+
+/* Clock Styles */
+.birthday_banner > div#dateToday {
+    position: absolute;
+    display: block;
+    top: 25px;
+    margin: 40px 0 0 25px;
+    font-size: 2em;
+    font-weight: normal;
+    color: white;
+    text-shadow: -3px -3px 5px black, 3px -3px 5px black,
+    -3px 3px 5px black, 3px 3px 5px black;
+    justify-content: center;
+}
+
+/* Countdown Styles */
+.birthday_banner > div#bdayCountdown {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+
+}
+
+div#bdayCountdown div {
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 0 10px;
+    line-height: 1.2em;
+    font-size: 1.5em;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    text-shadow: -3px -3px 5px black, 3px -3px 5px black,
+    -3px 3px 5px black, 3px 3px 5px black;
+    margin: 0 5px;
+
+}
+
+div#bdayCountdown div span {font-size: 2em;}
+
+/* Audio Row styles */
+.media_row {
+    /*position: relative;*/
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.columns-1-2 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-sizing: border-box;
+    width: 50%;
+    flex: 1 1 50%;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(37, 150, 190);
+}
+
+.birthday_photo-figure {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-sizing: border-box;
+}
+
+.birthday_photo-figure img {
+    width: 100%;
+    margin-top: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: block;
+}
+
+.text_container {
+    width: auto;
+    height: auto;
+    align-self: center;
+    box-sizing: border-box;
+    text-align: right;
+    margin-right: 5%;
+    font-family: 'Inter', sans-serif;
+    color: white;
+}
+
+.text_container h2 {
+    font-size: 2.625rem;
+    line-height: 2;
+}
+
+.text_container p {
+    font-size: 2rem;
+    margin-bottom: 5%;
+}
+
+.text_container audio {width: 80%;}
+
+/* Video Styles */
+.video_container {margin: 0; padding: 0;}
+.video_container > video {width: 100%;}
+
+.venue_container {
+    font-family: 'Inter', sans-serif;
+    color: white;
+}
+
+.venue_container h2 {
+    font-size: 2.625rem;
+    line-height: 2;
+}
+
+.venue_container p {
+    font-size: 2rem;
+    margin-bottom: 5%;
+}
+/*migrate*/
+
+/* ===============================
+   Assignment 4 Styles Added
+   September 1, 2024
+   ===============================
+*/
+
+/* Schedule Styles */
+div#schedule_container {
+    background-color: white;
+    height: 300px;
+    overflow:hidden;
+    border: rgb(37, 150, 190) 5px inset;
+    margin: 5% auto;
+}
 
 
-/* New styles for Assignment 3 added below */
+/* Table Styles */
+table {
+    color: rgb(37, 150, 190);
+    font-size: 2em;
+    padding: 10px;
+    height: 1000px;
+    width: 100%;
+}
+
+table td {
+    vertical-align: top;
+    padding: 6px;
+    border-bottom: 1px solid black;
+    margin: 0;
+}
+
+
+/* birthday.html Footer Styles */
+footer.birthday_footer {
+    width: 100%;
+    background-color: white;
+    color: rgb(37, 150, 190);
+    font-size: 1.5em;
+}
+
+/* New styles for Assignment 4 added below */
 /* ===============================
    Mobile Devices: 0px to 480px
    ===============================
@@ -229,7 +464,7 @@ footer {
         display: block;
     }
 
-    nav.horizontal ul {
+    nav#navLinks ul {
         display: none;
     }
 
@@ -237,6 +472,7 @@ footer {
         background-color: rgb(227, 220, 220);
         display: block;
     }
+
 
 }
 /* ===============================
@@ -257,8 +493,9 @@ footer {
         box-sizing: border-box;
     }
 }
+
 /* ===============================
-   Desktop Devices: greater than 480px
+   Desktop Devices: greater than 769px
    ===============================
 */
 @media only screen and (min-width: 769px) {

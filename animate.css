@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+/*
+    COMP 2681, Assignment 4
+    Animation style sheet birthday.html
+    Author: Jerome Laranang, T00635622
+    Date:   September 2, 2024
+
+    Filename: animate.css
+*/
+
+/* Schedule Styles */
+div#schedule_container {position: relative;}
+
+div#schedule_container table#schedule_table {position: absolute;}
+
+/* Keyframe Styles */
+@keyframes scroll {
+    0% {top: 250px;}
+    100% {top: -900px;}
+}
+
+/* Animation Styles */
+div#schedule_container table#schedule_table {
+    animation: scroll 20s linear infinite;
+}
+
+div#schedule_container table#schedule_table:hover {
+    animation-play-state: paused;
+}
