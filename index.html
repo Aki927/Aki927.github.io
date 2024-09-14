@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <!--
-  COMP 2681, Assignment 2 & 3
+  COMP 2681, Assignment 5
   HTML page for a personal website
   Author: Jerome Laranang
-  Date:   July 24, 2024
+  Date:   September 14, 2024
 
   Filename: index.html
   Link: https://aki927.github.io/
@@ -24,13 +24,18 @@
   <link href="oform.css" rel="stylesheet" media="screen"/>
   <link href="print.css" rel="stylesheet" media="print"/>
   <script src="formSubmit.js"></script>
+  <script src="background_animation.js" async></script> <!-- Assignment 5 -->
 
 </head>
 <body>
 <header>
+  <!-- Dynamically set to real-time using background_animation.js -->
+  <div id="currentDateTime-div"><h3>9/12/2024 9:50:12 p.m.</h3></div>
+
   <a href="index.html">
     <img src="images/heading_logo2.png" alt="Heading with logo"/>
   </a>
+
   <nav id="navLinks" class="horizontal">
     <a id="navicon" href="#"><img src="images/navicon.png" alt="navicon" width="512"/></a>
     <ul>

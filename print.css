@@ -69,9 +69,9 @@ article:nth-of-type(n+2) {
    ===============================
 */
 div.birthday_banner h2, div#dateToday,
-div#bdayCountdown, div.text_container,
+div#bdayCountdown, div.container_left,
 div.video_container, figure.birthday_photo-figure img,
-div.venue_container, div.formRow > input,
+div.text_container_right, div.formRow > input,
 div.text-box > textarea, div#buttons,
 article.rsvp_article > h3 {
     display: none;

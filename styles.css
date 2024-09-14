@@ -31,13 +31,14 @@ body {
     background-color: rgba(232,232,232,255);
     font-family: Verdana, Geneva, Arial, sans-serif;
     margin: 0 auto;
-    width: 100%;
+    width: 80%;
     min-width: 1000px;
     max-width: 1400px;
     justify-content: center;
 }
 
 header a img {
+    position: relative;
     display: block;
     width: 100%;
 }
@@ -208,8 +209,7 @@ footer {
     padding: 2% 0 2%;
 }
 
-/*migrate*/
-/* Banner Styles */
+/* Birthday Banner Styles */
 .birthday_banner {
     position: relative;
     margin: 0 auto;
@@ -288,7 +288,6 @@ div.birthday_banner > h1:hover { /* Animation Styles */
     display: flex;
     -webkit-flex-flow: row nowrap;
     flex-flow: row nowrap;
-
 }
 
 div#bdayCountdown div {
@@ -297,11 +296,12 @@ div#bdayCountdown div {
     width: 100%;
     padding: 0 10px;
     line-height: 1.2em;
-    font-size: 1.5em;
+    font-weight: bold;
+    font-size: 2em;
     font-family: 'Inter', sans-serif;
-    color: white;
-    text-shadow: -3px -3px 5px black, 3px -3px 5px black,
-    -3px 3px 5px black, 3px 3px 5px black;
+    color: black;
+    text-shadow: -3px -3px 5px white, 3px -3px 5px white,
+    -3px 3px 5px white, 3px 3px 5px white;
     margin: 0 5px;
 
 }
@@ -471,6 +471,16 @@ footer.birthday_footer {
     a#navicon:hover+ul, nav.horizontal ul:hover {
         background-color: rgb(227, 220, 220);
         display: block;
+    }
+
+    .columns-1-2 {
+        width: 100%; /* Full width for smaller screens */
+        margin: 0; /* Reset any margins */
+    }
+
+    .media_row {
+        display: flex;
+        flex-direction: column; /* Stack columns vertically */
     }
 
 
