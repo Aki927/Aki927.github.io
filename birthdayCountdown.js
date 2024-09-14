@@ -27,7 +27,7 @@ function showCountdown() {
         dateString + " " + timeString;
 
     // Defines a variable for my birthday: July 27, 2025
-    let bDate = new Date("January 27, 2024");
+    let bDate = new Date("July 27, 2024");
     let nextYear = currentDay.getFullYear() + 1;
     //let nextYear = currentDay.getFullYear(); Comment out. For testing only.
     bDate.setFullYear(nextYear);
